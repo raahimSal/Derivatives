@@ -114,12 +114,12 @@ forecast_vol = function(model, historical_dat, n_ahead, window_size) {#takes opt
 run_all = function(ticker, n_ahead, window_size) {
   print(ticker)
   #Make sure you change the path to the file
-  data = as.numeric(read.csv(paste(c('/Users/vishalchopra/Desktop/Predictions/', ticker, '.csv'), sep="", collapse=""))[['Returns']])
+  data = as.numeric(read.csv(paste(c('/Users/Raahim Salman/OneDrive - The University of Western Ontario/[XTRA] - Extracurriculars/[MCap] - Mustang Capital/Derivs 2019-2020/GARCH Model for Vol/Derivatives/Predictions/', ticker, '.csv'), sep="", collapse=""))[['Returns']])
   window = window_size
   arr = historical_vol(data, window)
   model = fit_garch(arr, 15)
   prediction = forecast_vol(model, arr, n_ahead, window)
 }
 
-run_all('S', 10, 5)
+run_all('AAPL', 10, 5)
 

@@ -121,7 +121,7 @@ def get_historical(num, tick):
     num_months = num
     
     #Location to save in
-    save_location = '/Users/vishalchopra/Desktop/Predictions/' + tick + '.csv'
+    save_location = '/Users/Raahim Salman/OneDrive - The University of Western Ontario/[XTRA] - Extracurriculars/[MCap] - Mustang Capital/Derivs 2019-2020/GARCH Model for Vol/Derivatives/Predictions/' + tick + '.csv'
     
     today = datetime.datetime.strftime(datetime.datetime.today(), '%Y-%m-%d')
     past = datetime.datetime.strftime(datetime.datetime.today()-relativedelta.relativedelta(months=num_months), '%Y-%m-%d')
@@ -134,4 +134,4 @@ def get_historical(num, tick):
     #location to save in
     df.to_csv(save_location)
 
-get_historical(12, 'S')
+get_historical(12, 'AAPL')
